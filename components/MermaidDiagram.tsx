@@ -20,7 +20,20 @@ export default function MermaidDiagram({ source }: Props) {
         const mermaid = (await import("mermaid")).default;
 
         if (!mermaidInitialized) {
-          mermaid.initialize({ startOnLoad: false, securityLevel: "strict" });
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: "strict",
+            theme: "base",
+            themeVariables: {
+              primaryColor: "#87A878",
+              primaryTextColor: "#2C3E2D",
+              primaryBorderColor: "#6F8F62",
+              lineColor: "#C4845A",
+              secondaryColor: "#E8DCC8",
+              tertiaryColor: "#F5F0E8",
+              fontFamily: "var(--font-dm-sans)",
+            },
+          });
           mermaidInitialized = true;
         }
 
@@ -54,7 +67,7 @@ export default function MermaidDiagram({ source }: Props) {
   return (
     <div
       ref={containerRef}
-      className="flex justify-center overflow-x-auto rounded-lg border border-gray-200 bg-white p-4"
+      className="flex justify-center overflow-x-auto rounded-lg border border-sand bg-white p-4"
       aria-label="Concept diagram"
     />
   );

@@ -1,20 +1,24 @@
 import ExplainForm from "@/components/ExplainForm";
+import Card from "@/components/ui/Card";
+import Container from "@/components/ui/Container";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="mx-auto max-w-2xl">
-        <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Prysm</h1>
-          <p className="mt-2 text-gray-600">
+    <div className="py-16 px-4">
+      <Container className="max-w-2xl">
+        <div className="mb-10 text-center">
+          <h1 className="font-serif text-4xl sm:text-5xl font-semibold text-forest tracking-tight text-balance">
+            Explanations that meet you where you are.
+          </h1>
+          <p className="mt-4 text-forest/60 text-lg">
             Enter any topic. Choose your level and how you want to learn. Get an explanation built for you.
           </p>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <Card>
           <ExplainForm />
-        </div>
-      </div>
-    </main>
+        </Card>
+      </Container>
+    </div>
   );
 }

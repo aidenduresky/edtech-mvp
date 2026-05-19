@@ -7,7 +7,7 @@ interface Props {
 
 export default function MarkdownRenderer({ content }: Props) {
   return (
-    <div className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-h2:text-lg prose-p:text-gray-700 prose-strong:text-gray-900 prose-li:text-gray-700">
+    <div className="prose prose-stone max-w-none prose-headings:font-serif prose-headings:text-forest prose-a:text-terracotta prose-strong:text-forest prose-pre:bg-forest prose-pre:text-cream prose-code:text-terracotta">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     </div>
   );

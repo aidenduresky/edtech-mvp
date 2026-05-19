@@ -15,7 +15,7 @@ export default function ResultsDisplay({ response }: Props) {
 
   return (
     <section className="mt-8" aria-labelledby="result-title">
-      <h2 id="result-title" className="text-xl font-semibold text-gray-900 mb-4">
+      <h2 id="result-title" className="font-serif text-xl font-semibold text-forest mb-4">
         {title}
       </h2>
 
